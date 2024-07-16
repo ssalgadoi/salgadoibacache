@@ -1,0 +1,51 @@
+footer {
+    position: relative;
+    width: 100%;
+    background-color: black; /* Color de fondo negro */
+    color: white; /* Color de texto blanco */
+    padding: 20px 0; /* Espaciado interno arriba y abajo de 20px, 0 a los lados */
+}
+
+footer .social-icon {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 0;
+   flex-wrap: wrap;
+}
+
+footer .social-icon li {
+   list-style: none;/* Margen entre los elementos */
+}
+
+footer .social-icon li a {
+    color: white; /* Color de texto blanco para los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: 14px; /* Tamaño de la fuente */
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-icon li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: red;
+}
+
+footer .año {
+    font-size: 14px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+}
+
+footer .año span {
+    margin-left: 5px; /* Espacio entre los elementos span */
+    font-weight: bold; /* Texto en negrita */
+}

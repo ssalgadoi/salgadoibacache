@@ -1,0 +1,104 @@
+/* Estilos generales */
+.header {
+    /* Color de fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    padding: 1rem 0; /* Espaciado interior superior e inferior */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.contenedor {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 1rem; /* Espaciado interior a los lados */
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.navegacion-principal {
+    margin-top: 1rem; /* Espacio superior para los enlaces */
+}
+
+.navegacion-principal a {
+    color: #fff; /* Color de los enlaces blanco */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    margin: 0 1rem; /* Espaciado entre enlaces */
+}
+
+.navegacion-principal a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón sobre los enlaces */
+}
+
+.contenedor-imagenes {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    overflow: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.imagen-contenedor {
+    flex: 1; /* Cada contenedor ocupa la misma cantidad de espacio */
+    position: relative;
+    height: 150px; /* Altura fija para cada contenedor de imagen */
+    overflow: hidden; /* Oculta el contenido que se desborde */
+    margin: 0; /* Elimina el margen entre los contenedores de imagen */
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: auto; /* Utiliza toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    display: block;
+    transition: transform 0.3s ease-out;
+}
+
+.imagen-contenedor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-out;
+}
+
+.imagen-contenedor p {
+    position: absolute;
+    top: 50%; /* Centra verticalmente desde la parte superior del contenedor */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease-out;
+    text-align: center; /* Centra el texto horizontalmente */
+    z-index: 1; /* Asegura que esté sobre la imagen */
+}
+
+.imagen-contenedor:hover::before {
+    opacity: 1; /* Muestra el fondo oscuro al pasar el ratón */
+}
+
+.imagen-contenedor:hover p {
+    opacity: 1; /* Muestra el título al pasar el ratón */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor-imagenes {
+        flex-direction: column; /* Alinea las imágenes en columna en dispositivos móviles */
+        align-items: stretch; /* Ajusta el alineamiento vertical */
+    }
+
+    .imagen-contenedor {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 250px; /* Ajusta la altura de los contenedores en dispositivos móviles */
+        margin: 1rem 0; /* Espaciado entre los contenedores de imagen */
+    }
+
+    .imagen-contenedor img {
+        height: 100%; /* Utiliza toda la altura del contenedor */
+    }
+}

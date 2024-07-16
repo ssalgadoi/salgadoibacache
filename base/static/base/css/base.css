@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    background-image: url('/static/base/img/fotouno.jpeg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el fondo */
+    height: 2000px;
+    font-family: 'Sawarabi Mincho', sans-serif; 
+}
+
